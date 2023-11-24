@@ -16,4 +16,8 @@ module.exports = {
       env: { mocha: true },
     },
   ],
+  plugins: ["deprecated-rules"],
+  rules: {
+    "deprecated-rules/no-deprecated-rules": "error",
+  },
 };
