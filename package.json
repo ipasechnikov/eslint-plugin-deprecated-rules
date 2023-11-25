@@ -15,9 +15,12 @@
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:js": "eslint .",
     "test": "mocha tests --recursive",
-    "update:eslint-docs": "eslint-doc-generator"
+    "update:eslint-docs": "eslint-doc-generator",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "eslint-find-rules": "^4.1.0",
+    "patch-package": "^8.0.0",
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
