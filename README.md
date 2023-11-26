@@ -34,15 +34,33 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "deprecated-rules/rule-name": 2
+        "deprecated-rules/no-deprecated-rules": "warn"
     }
+}
+```
+
+Or extend `recommended` config.
+
+```json
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:deprecated-rules/recommended"
+    ]
 }
 ```
 
 ## Rules
 
 <!-- begin auto-generated rules list -->
-TODO: Run eslint-doc-generator to generate the rules list.
+
+⚠️ Configurations set to warn in.\
+✅ Set in the `recommended` configuration.
+
+| Name                                                     | Description                       | ⚠️ |
+| :------------------------------------------------------- | :-------------------------------- | :- |
+| [no-deprecated-rules](docs/rules/no-deprecated-rules.md) | Warns for ESLint deprecated rules | ✅  |
+
 <!-- end auto-generated rules list -->
 
 
