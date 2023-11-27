@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "eslint-find-rules": "^4.1.0",
+    "eslint-plugin-json-es": "^1.5.7",
     "patch-package": "^8.0.0",
     "requireindex": "^1.2.0"
   },
