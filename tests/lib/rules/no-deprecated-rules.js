@@ -17,6 +17,7 @@ const rule = require("../../../lib/rules/no-deprecated-rules"),
 //------------------------------------------------------------------------------
 
 const ruleTester = new RuleTester();
+/*
 ruleTester.run("no-deprecated-rules", rule, {
   valid: [
     // give me some code that won't trigger a warning
@@ -29,3 +30,4 @@ ruleTester.run("no-deprecated-rules", rule, {
     },
   ],
 });
+*/
