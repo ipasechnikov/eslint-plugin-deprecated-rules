@@ -25,8 +25,6 @@ Examples of **incorrect** code for this rule:
 `array-bracket-newline` is considered deprecated since ESLint v8.53.0 according to [official documentation](https://eslint.org/docs/latest/rules/array-bracket-newline).
 
 ```json
-/* Your project's .eslintrc.json file */
-
 {
     "rules": {
         "array-bracket-newline": "error",
@@ -38,8 +36,6 @@ Examples of **incorrect** code for this rule:
 Examples of **correct** code for this rule:
 
 ```json
-/* Your project's .eslintrc.json file */
-
 {
     "rules": {
         "no-alert": "error"
