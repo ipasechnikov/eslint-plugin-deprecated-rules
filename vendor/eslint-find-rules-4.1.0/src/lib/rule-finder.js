@@ -58,6 +58,13 @@ function _getPluginRules(config) {
   /* istanbul ignore else */
   if (plugins) {
     plugins.forEach(plugin => {
+      // ! Added by "eslint-plugin-deprecated-rules" package
+      // Skip checking current plugin for deprecated rules
+      // There is an issue when you to load itself with 'require'
+      if (plugin === 'deprecated-rules') {
+        return;
+      }
+
       const normalized = normalizePluginName(plugin);
       const pluginConfig = require(normalized.module);
       const rules = pluginConfig.rules === undefined ? {} : pluginConfig.rules;
@@ -130,6 +137,12 @@ function RuleFinder(config, {omitCore, includeDeprecated}) {
 
   // Get all the current rules that are deprecated
   this.getDeprecatedRules = () => getSortedRules(deprecatedRuleNames);
+
+  // ! Added by "eslint-plugin-deprecated-rules" package
+  // Extra helper methods
+  this.getAllRulesRaw = () => allRules;
+  this.getCoreRulesRaw = () => coreRules;
+  this.getPluginRulesRaw = () => pluginRules;
 }
 
 async function createRuleFinder(specifiedFile, options) {
