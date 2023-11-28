@@ -1,6 +1,6 @@
 "use strict";
 
-const getRuleFinder = require("eslint-find-rules");
+const getRuleFinder = require("../vendor/eslint-find-rules");
 
 async function tryGetDeprecatedRules(specifiedFile) {
   try {
@@ -30,7 +30,7 @@ async function getDeprecatedRules() {
     await tryGetDeprecatedRules(".eslintrc.js")
     || await tryGetDeprecatedRules(".eslintrc.json")
     || await tryGetDeprecatedRules()
-    || [];
+    || {};
   return deprecatedRules;
 }
 
