@@ -4,7 +4,10 @@ const getRuleFinder = require("../vendor/eslint-find-rules");
 
 async function tryGetDeprecatedRules(specifiedFile) {
   try {
-    const ruleFinder = await getRuleFinder(specifiedFile);
+    const ruleFinder = await getRuleFinder(
+      specifiedFile, {
+      ext: [".js", ".ts"]
+    });
     const allRules = ruleFinder.getAllRulesRaw();
     const deprecatedRuleNames = ruleFinder.getDeprecatedRules();
 
