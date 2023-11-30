@@ -145,13 +145,32 @@ function RuleFinder(config, {omitCore, includeDeprecated}) {
   this.getPluginRulesRaw = () => pluginRules;
 }
 
+const ruleSource = {
+  config: 'config',
+  everywhere: 'everywhere',
+};
+
+function getFiles(specifiedFile, options) {
+  const {ext = ['.js'], source = ruleSource.config} = options;
+  switch (source) {
+    case ruleSource.config:
+      return [specifiedFile];
+    case ruleSource.everywhere:
+      const extensionRegExp = _createExtensionRegExp(ext);
+      const files = glob.sync(`**/*`, {dot: true, matchBase: true})
+        .filter(file => extensionRegExp.test(file));    
+      return files;
+    default:
+      return [];
+  }
+}
+
 async function createRuleFinder(specifiedFile, options) {
   const configFile = _getConfigFile(specifiedFile);
 
-  const {ext = ['.js']} = options;
-  const extensionRegExp = _createExtensionRegExp(ext);
-  const files = glob.sync(`**/*`, {dot: true, matchBase: true})
-    .filter(file => extensionRegExp.test(file));
+  // ! Added by "eslint-plugin-deprecated-rules" package
+  // Optimize performance by reducing rule search places
+  const files = getFiles(specifiedFile, options);
 
   const config = await _getConfig(configFile, files);
 

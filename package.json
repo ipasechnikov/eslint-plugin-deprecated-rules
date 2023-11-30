@@ -20,7 +20,8 @@
   "dependencies": {
     "eslint-plugin-json-es": "^1.5.7",
     "glob": "^10.3.10",
-    "requireindex": "^1.2.0"
+    "requireindex": "^1.2.0",
+    "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
     "eslint": "^8.0.0",
