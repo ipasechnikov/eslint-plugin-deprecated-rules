@@ -11,6 +11,7 @@ Warns about deprecated or removed ESLint rules in ESLint config.
     - [Option 1. Add plugin and its rules](#option-1-add-plugin-and-its-rules)
     - [Option 2. Extend `recommended` config](#option-2-extend-recommended-config)
   - [Rules](#rules)
+  - [License](#license)
 
 ## Installation
 
@@ -28,7 +29,10 @@ npm install eslint-plugin-deprecated-rules --save-dev
 
 ## Usage
 
-There are 2 ways to use the package
+There are 2 main ways to use this package:
+
+- Add plugin and its rules manually
+- Extend `recommended` config provided by the plugin
 
 ### Option 1. Add plugin and its rules
 
@@ -74,3 +78,7 @@ Then configure the rules you want to use under the rules section.
 | [no-deprecated-rules](docs/rules/no-deprecated-rules.md) | Warns for ESLint deprecated rules | ✅  |
 
 <!-- end auto-generated rules list -->
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
