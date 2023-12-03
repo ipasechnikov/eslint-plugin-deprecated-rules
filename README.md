@@ -5,7 +5,7 @@ Warns about deprecated or removed ESLint rules in ESLint config.
 This small plugin was created for the purpose of finding whether our team of developers is using deprecated rules for the currently installed version of ESLint.
 Meaning, if you are using an older version of ESLint and a rule got deprecated in newer versions, then you won't get any warnings.
 
-Provided rules work both for ESLint core rules, as well as rules provided by 3rd-party plugins.
+This plugin's rules work both for ESLint core rules, as well as rules provided by 3rd-party plugins.
 
 ## Table of Contents
 
