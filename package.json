@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-deprecated-rules",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Warns about deprecated or removed ESLint rules in ESLint config",
   "keywords": [
     "eslint",
@@ -8,6 +8,10 @@
     "eslint-plugin"
   ],
   "author": "Ilia Pasechnikov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ipasechnikov/eslint-plugin-deprecated-rules.git"
+  },
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "scripts": {
