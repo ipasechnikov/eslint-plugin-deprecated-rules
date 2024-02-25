@@ -8,6 +8,10 @@
     "eslint-plugin"
   ],
   "author": "Ilia Pasechnikov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ipasechnikov/eslint-plugin-deprecated-rules.git"
+  },
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "scripts": {
